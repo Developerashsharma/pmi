@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Paramount Metal Industries</title>
+    <meta name="description"
+        content="Expert metal services including custom cutting, polishing, logistics, and material testing.">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .step-indicator::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #ddd;
+            z-index: 0;
+        }
+
+        .step {
+            width: 30px;
+            height: 30px;
+            background: #ddd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .step.active {
+            background: var(--secondary-color);
+        }
+
+        .step.completed {
+            background: var(--primary-color);
+        }
+
+        .form-step {
+            display: none;
+        }
+
+        .form-step.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/pmi-logo (1).png" alt="Paramount Metal" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Products</a>
+                        <div class="dropdown-menu mega-menu shadow-lg">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h6 class="text-uppercase text-secondary-custom fw-bold">Stainless Steel</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="product-ss-sheets.html" class="dropdown-item">SS Sheets &
+                                                    Plates</a>
+                                            </li>
+                                            <li><a href="product-ss-pipes.html" class="dropdown-item">SS Pipes &
+                                                    Tubes</a></li>
+                                            <li><a href="product-ss-rods.html" class="dropdown-item">SS Rods & Bars</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6 class="text-uppercase text-secondary-custom fw-bold">Non-Ferrous</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="product-copper-products.html" class="dropdown-item">Copper
+                                                    Products</a></li>
+                                            <li><a href="product-brass-components.html" class="dropdown-item">Brass
+                                                    Components</a></li>
+                                            <li><a href="product-aluminum-extrusion.html" class="dropdown-item">Aluminum
+                                                    Extrusions</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6 class="text-uppercase text-secondary-custom fw-bold">Industrial Fittings
+                                        </h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="product-flanges.html" class="dropdown-item">Flanges</a></li>
+                                            <li><a href="product-fittings.html" class="dropdown-item">Buttweld
+                                                    Fittings</a></li>
+                                            <li><a href="product-fasteners.html" class="dropdown-item">Fasteners</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="https://images.unsplash.com/photo-1535813547-99c456a41d4a?auto=format&fit=crop&w=400&q=80"
+                                            alt="Metal" class="img-fluid rounded">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="tel:+919876543210" class="btn btn-custom btn-sm"><i class="fas fa-phone-alt me-2"></i>
+                            +91 98765 43210</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="bg-primary-custom py-5 text-white text-center">
+        <div class="container">
+            <h1 class="display-4">Our Services</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html"
+                            class="text-secondary-custom text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Services</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Services Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="service-card text-center">
+                        <i class="fas fa-cut service-icon"></i>
+                        <h4>Custom Cutting</h4>
+                        <p class="text-muted">We provide precision cutting services for sheets, plates, pipes, and bars.
+                            Our advanced machinery ensures accurate dimensions and smooth edges.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card text-center">
+                        <i class="fas fa-shipping-fast service-icon"></i>
+                        <h4>Logistics & Delivery</h4>
+                        <p class="text-muted">Reliable and fast delivery network across India. We ensure your materials
+                            reach you safely and on time, with tracking available.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card text-center">
+                        <i class="fas fa-flask service-icon"></i>
+                        <h4>Material Testing</h4>
+                        <p class="text-muted">Quality is paramount. We offer third-party inspection and lab testing
+                            services to verify chemical composition and mechanical properties.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="service-card text-center">
+                        <i class="fas fa-spray-can service-icon"></i>
+                        <h4>Surface Polishing</h4>
+                        <p class="text-muted">From mirror finish to matte and hairline finish, we offer various surface
+                            treatments for stainless steel sheets and products.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card text-center">
+                        <i class="fas fa-cogs service-icon"></i>
+                        <h4>Machining</h4>
+                        <p class="text-muted">Custom machining of components as per drawings. We handle turning,
+                            milling, and drilling for small to large batches.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card text-center">
+                        <i class="fas fa-handshake service-icon"></i>
+                        <h4>Consultation</h4>
+                        <p class="text-muted">Expert advice on material selection for specific applications. Our
+                            technical team helps you choose the right grade for your project.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-step Request Form -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow p-4">
+                        <h3 class="text-center mb-4">Request a Service</h3>
+
+                        <div class="step-indicator">
+                            <div class="step active" id="step1-indicator">1</div>
+                            <div class="step" id="step2-indicator">2</div>
+                            <div class="step" id="step3-indicator">3</div>
+                        </div>
+
+                        <form id="serviceForm">
+                            <!-- Step 1: Service Selection -->
+                            <div class="form-step active" id="step1">
+                                <h5 class="mb-3">Select Service Type</h5>
+                                <div class="mb-3">
+                                    <select class="form-select" id="serviceType" required>
+                                        <option selected disabled>Choose a service...</option>
+                                        <option value="cutting">Custom Cutting</option>
+                                        <option value="logistics">Logistics</option>
+                                        <option value="testing">Material Testing</option>
+                                        <option value="polishing">Surface Polishing</option>
+                                        <option value="machining">Machining</option>
+                                        <option value="consultation">Consultation</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Description of Requirement</label>
+                                    <textarea class="form-control" rows="4" placeholder="Describe what you need..."
+                                        required></textarea>
+                                </div>
+                                <div class="text-end">
+                                    <button type="button" class="btn btn-custom" onclick="nextStep(1)">Next</button>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Contact Details -->
+                            <div class="form-step" id="step2">
+                                <h5 class="mb-3">Your Details</h5>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Name</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Company Name</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Phone</label>
+                                        <input type="tel" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="mt-4 d-flex justify-content-between">
+                                    <button type="button" class="btn btn-secondary"
+                                        onclick="prevStep(2)">Previous</button>
+                                    <button type="button" class="btn btn-custom" onclick="nextStep(2)">Next</button>
+                                </div>
+                            </div>
+                            <div class="form-message" id="formMessage"></div>
+                            <!-- Step 3: Confirmation -->
+                            <div class="form-step" id="step3">
+                                <h5 class="mb-3">Review & Submit</h5>
+                                <p>Please review your details before submitting.</p>
+                                <div class="alert alert-info">
+                                    <p class="mb-0">By clicking submit, you agree to our terms and conditions.</p>
+                                </div>
+                                <div class="mt-4 d-flex justify-content-between">
+                                    <button type="button" class="btn btn-secondary"
+                                        onclick="prevStep(3)">Previous</button>
+                                    <button type="submit" class="btn btn-success">Submit Request</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="footer-widget">
+                        <a href="index.html" class="text-white text-decoration-none h3 d-block mb-3">PARAMOUNT METAL</a>
+                        <p>Your trusted partner for premium quality metal products. Serving industries with integrity
+                            and excellence since 2000.</p>
+                        <div class="social-icons mt-3">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <div class="footer-widget">
+                        <h4>Quick Links</h4>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="assets/documents/PMI.pdf" download><i
+                                        class="fas fa-download me-2"></i>Download Brochure</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="footer-widget">
+                        <h4>Products</h4>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="products.html">Stainless Steel</a></li>
+                            <li><a href="products.html">Carbon Steel</a></li>
+                            <li><a href="products.html">Copper & Brass</a></li>
+                            <li><a href="products.html">Aluminum</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="footer-widget">
+                        <h4>Contact Us</h4>
+                        <ul class="list-unstyled footer-links">
+                            <li><i class="fas fa-map-marker-alt me-2"></i> 123, Metal Market, Kalbadevi, Mumbai - 400002
+                            </li>
+                            <li><i class="fas fa-phone me-2"></i> +91 9898263238 </li>
+                            <li><i class="fas fa-phone me-2"></i> +91 7567330781 </li>
+                            <li><i class="fas fa-envelope me-2"></i> info@paramountmetal.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright text-center">
+                <p class="mb-0">&copy; 2025 Paramount Metal Industries. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-btns">
+        <a href="https://wa.me/919876543210" class="float-btn btn-whatsapp" target="_blank"><i
+                class="fab fa-whatsapp"></i></a>
+        <a href="tel:+919876543210" class="float-btn btn-call"><i class="fas fa-phone"></i></a>
+        <a href="#" class="float-btn btn-top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+
+    <!-- Certificate Lightbox -->
+    <div id="certificateLightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="Certificate">
+            <button class="lightbox-prev" onclick="changeCertificate(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-next" onclick="changeCertificate(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

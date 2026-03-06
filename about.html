@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Paramount Metal Industries</title>
+    <meta name="description"
+        content="Learn about Paramount Metal Industries, our history, vision, and commitment to quality metal supply since 2000.">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: var(--secondary-color);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border: 4px solid #fff;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 50px);
+                margin-left: 50px !important;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/pmi-logo (1).png" alt="Paramount Metal" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Products</a>
+                        <div class="dropdown-menu mega-menu shadow-lg">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h6 class="text-uppercase text-secondary-custom fw-bold">Stainless Steel</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="product-ss-sheets.html" class="dropdown-item">SS Sheets &
+                                                    Plates</a>
+                                            </li>
+                                            <li><a href="product-ss-pipes.html" class="dropdown-item">SS Pipes &
+                                                    Tubes</a></li>
+                                            <li><a href="product-ss-rods.html" class="dropdown-item">SS Rods & Bars</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6 class="text-uppercase text-secondary-custom fw-bold">Non-Ferrous</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="product-copper-products.html" class="dropdown-item">Copper
+                                                    Products</a></li>
+                                            <li><a href="product-brass-components.html" class="dropdown-item">Brass
+                                                    Components</a></li>
+                                            <li><a href="product-aluminum-extrusion.html" class="dropdown-item">Aluminum
+                                                    Extrusions</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6 class="text-uppercase text-secondary-custom fw-bold">Industrial Fittings
+                                        </h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="product-flanges.html" class="dropdown-item">Flanges</a></li>
+                                            <li><a href="product-fittings.html" class="dropdown-item">Buttweld
+                                                    Fittings</a></li>
+                                            <li><a href="product-fasteners.html" class="dropdown-item">Fasteners</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="https://images.unsplash.com/photo-1535813547-99c456a41d4a?auto=format&fit=crop&w=400&q=80"
+                                            alt="Metal" class="img-fluid rounded">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="tel:+919876543210" class="btn btn-custom btn-sm"><i class="fas fa-phone-alt me-2"></i>
+                            +91 98765 43210</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="bg-primary-custom py-5 text-white text-center">
+        <div class="container">
+            <h1 class="display-4">About Us</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html"
+                            class="text-secondary-custom text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">About Us</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Company Story -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h6 class="text-secondary-custom fw-bold">OUR STORY</h6>
+                    <h2 class="mb-4">Building Trust Through Quality Metals Since 2000</h2>
+                    <p class="lead">Paramount Metal Industries has been a pioneer in the metal supply industry in
+                        Mumbai, catering to diverse sectors including construction, oil & gas, and manufacturing.</p>
+                    <p>Founded with a vision to provide world-class metal products, we have grown from a small trading
+                        shop to a leading supplier with a vast inventory of stainless steel, copper, brass, and aluminum
+                        products. Our commitment to quality, timely delivery, and customer satisfaction has earned us
+                        the trust of over 500 clients across India.</p>
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-success fa-2x me-3"></i>
+                                <div>
+                                    <h5 class="mb-0">ISO 9001:2015</h5>
+                                    <small class="text-muted">Certified Company</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-award text-warning fa-2x me-3"></i>
+                                <div>
+                                    <h5 class="mb-0">Best Supplier</h5>
+                                    <small class="text-muted">Award 2023</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80"
+                        class="img-fluid rounded shadow" alt="Warehouse">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-up">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-eye fa-3x text-primary-custom"></i>
+                        </div>
+                        <h3 class="text-center mb-3">Our Vision</h3>
+                        <p class="text-center">To be the most preferred and trusted partner for metal solutions
+                            globally, known for our quality, integrity, and innovation.</p>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-bullseye fa-3x text-secondary-custom"></i>
+                        </div>
+                        <h3 class="text-center mb-3">Our Mission</h3>
+                        <p class="text-center">To supply high-quality metal products that meet international standards,
+                            ensuring timely delivery and exceptional customer service while maintaining sustainable
+                            business practices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-secondary-custom fw-bold">OUR JOURNEY</h6>
+                <h2>Milestones</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4 class="text-primary-custom">2000</h4>
+                        <p>Established as a small retail shop in Kalbadevi, Mumbai.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4 class="text-primary-custom">2005</h4>
+                        <p>Expanded into wholesale distribution of Stainless Steel products.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4 class="text-primary-custom">2010</h4>
+                        <p>Started importing Non-Ferrous metals to cater to growing demand.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4 class="text-primary-custom">2018</h4>
+                        <p>Moved to a larger warehouse facility in Bhiwandi with advanced cutting machinery.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4 class="text-primary-custom">2024</h4>
+                        <p>Launched online portal to serve clients across India digitally.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Certifications & Clients</h2>
+            </div>
+            <div class="row text-center align-items-center grayscale-logos">
+                <div class="col-6 col-md-3 mb-4" data-aos="zoom-in">
+                    <i class="fas fa-certificate fa-4x text-muted"></i>
+                    <p class="mt-2">ISO 9001:2015</p>
+                </div>
+                <div class="col-6 col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-industry fa-4x text-muted"></i>
+                    <p class="mt-2">Top Industry Supplier</p>
+                </div>
+                <div class="col-6 col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-shield-alt fa-4x text-muted"></i>
+                    <p class="mt-2">Safety Certified</p>
+                </div>
+                <div class="col-6 col-md-3 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-globe fa-4x text-muted"></i>
+                    <p class="mt-2">Export Excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="footer-widget">
+                        <a href="index.html" class="text-white text-decoration-none h3 d-block mb-3">PARAMOUNT METAL</a>
+                        <p>Your trusted partner for premium quality metal products. Serving industries with integrity
+                            and excellence since 2000.</p>
+                        <div class="social-icons mt-3">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <div class="footer-widget">
+                        <h4>Quick Links</h4>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="assets/documents/PMI.pdf" download><i
+                                        class="fas fa-download me-2"></i>Download Brochure</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="footer-widget">
+                        <h4>Products</h4>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="products.html">Stainless Steel</a></li>
+                            <li><a href="products.html">Carbon Steel</a></li>
+                            <li><a href="products.html">Copper & Brass</a></li>
+                            <li><a href="products.html">Aluminum</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="footer-widget">
+                        <h4>Contact Us</h4>
+                        <ul class="list-unstyled footer-links">
+                            <li><i class="fas fa-map-marker-alt me-2"></i> 123, Metal Market, Kalbadevi, Mumbai - 400002
+                            </li>
+                            <li><i class="fas fa-phone me-2"></i> +91 9898263238 </li>
+                            <li><i class="fas fa-phone me-2"></i> +91 7567330781 </li>
+                            <li><i class="fas fa-envelope me-2"></i> info@paramountmetal.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright text-center">
+                <p class="mb-0">&copy; 2025 Paramount Metal Industries. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-btns">
+        <a href="https://wa.me/919876543210" class="float-btn btn-whatsapp" target="_blank"><i
+                class="fab fa-whatsapp"></i></a>
+        <a href="tel:+919876543210" class="float-btn btn-call"><i class="fas fa-phone"></i></a>
+        <a href="#" class="float-btn btn-top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+
+    <!-- Certificate Lightbox -->
+    <div id="certificateLightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="Certificate">
+            <button class="lightbox-prev" onclick="changeCertificate(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-next" onclick="changeCertificate(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

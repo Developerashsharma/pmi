@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Paramount Metal Industries</title>
+    <meta name="description"
+        content="Browse our extensive range of metal products including Stainless Steel, Copper, Brass, and Aluminum.">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/pmi-logo (1).png" alt="Paramount Metal" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Products</a>
+                        <div class="dropdown-menu mega-menu shadow-lg">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h6 class="text-uppercase text-secondary-custom fw-bold">Stainless Steel</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="product-ss-sheets.html" class="dropdown-item">SS Sheets &
+                                                    Plates</a>
+                                            </li>
+                                            <li><a href="product-ss-pipes.html" class="dropdown-item">SS Pipes &
+                                                    Tubes</a></li>
+                                            <li><a href="product-ss-rods.html" class="dropdown-item">SS Rods & Bars</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6 class="text-uppercase text-secondary-custom fw-bold">Non-Ferrous</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="product-copper-products.html" class="dropdown-item">Copper
+                                                    Products</a></li>
+                                            <li><a href="product-brass-components.html" class="dropdown-item">Brass
+                                                    Components</a></li>
+                                            <li><a href="product-aluminum-extrusion.html" class="dropdown-item">Aluminum
+                                                    Extrusions</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6 class="text-uppercase text-secondary-custom fw-bold">Industrial Fittings
+                                        </h6>
+                                        <ul class="list-unstyled">
+                                            <li><a href="product-flanges.html" class="dropdown-item">Flanges</a></li>
+                                            <li><a href="product-fittings.html" class="dropdown-item">Buttweld
+                                                    Fittings</a></li>
+                                            <li><a href="product-fasteners.html" class="dropdown-item">Fasteners</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="https://images.unsplash.com/photo-1535813547-99c456a41d4a?auto=format&fit=crop&w=400&q=80"
+                                            alt="Metal" class="img-fluid rounded">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="tel:+919876543210" class="btn btn-custom btn-sm"><i class="fas fa-phone-alt me-2"></i>
+                            +91 98765 43210</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="bg-primary-custom py-5 text-white text-center">
+        <div class="container">
+            <h1 class="display-4">Our Products</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html"
+                            class="text-secondary-custom text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Products</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3 mb-4">
+                    <div class="card border-0 shadow-sm p-3">
+                        <h4 class="mb-3">Filters</h4>
+
+                        <div class="mb-4">
+                            <input type="text" id="searchInput" class="form-control" placeholder="Search products...">
+                        </div>
+
+                        <div class="mb-4">
+                            <h6 class="fw-bold">Categories</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="cat1">
+                                <label class="form-check-label" for="cat1">Stainless Steel</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="cat2">
+                                <label class="form-check-label" for="cat2">Copper & Brass</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="cat3">
+                                <label class="form-check-label" for="cat3">Aluminum</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="cat4">
+                                <label class="form-check-label" for="cat4">Fittings & Flanges</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h6 class="fw-bold">Material Grade</h6>
+                            <select id="gradeFilter" class="form-select">
+                                <option value="all" selected>All Grades</option>
+                                <option value="304">304 / 304L</option>
+                                <option value="316">316 / 316L</option>
+                                <option value="202">202</option>
+                                <option value="duplex">Duplex</option>
+                            </select>
+                        </div>
+
+                        <button id="applyFilters" class="btn btn-custom w-100">Apply Filters</button>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="col-lg-9">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <p class="mb-0" id="productCount">Showing <span id="currentRange">1-9</span> of <span
+                                id="totalProducts">0</span> products</p>
+                        <select id="sortSelect" class="form-select w-auto">
+                            <option value="featured" selected>Sort by: Featured</option>
+                            <option value="name-asc">Name: A to Z</option>
+                            <option value="name-desc">Name: Z to A</option>
+                        </select>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Product Item -->
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/ss1.png"
+                                        class="card-img-top" alt="SS Sheets">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">SS 304 Sheets</h5>
+                                    <p class="card-text text-muted">High durability and corrosion resistance.</p>
+                                    <a href="product-ss-sheets.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/cop2.png"
+                                        class="card-img-top" alt="Copper Pipes">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Copper Pipes</h5>
+                                    <p class="card-text text-muted">Ideal for HVAC and plumbing.</p>
+                                    <a href="product-copper-products.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/iflange.png"
+                                        class="card-img-top" alt="Flanges">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">SS Flanges</h5>
+                                    <p class="card-text text-muted">SORF, Blind, Slip-on flanges.</p>
+                                    <a href="product-ss-flanges.html" class="btn btn-outline-dark btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/alu-rod.png"
+                                        class="card-img-top" alt="Aluminum Bars">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Aluminum Round Bars</h5>
+                                    <p class="card-text text-muted">Lightweight and strong.</p>
+                                    <a href="product-alu-round-bar.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/brass-hex-bars.png"
+                                        class="card-img-top" alt="Brass Rods">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Brass Hex Rods</h5>
+                                    <p class="card-text text-muted">Precision machined components.</p>
+                                    <a href="products-brass-hax-bar.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/ss-coil.png"
+                                        class="card-img-top" alt="SS Coils">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">SS Coils</h5>
+                                    <p class="card-text text-muted">Cold rolled stainless steel coils.</p>
+                                    <a href="product-ss-sheets.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/ss2.png"
+                                        class="card-img-top" alt="SS Sheets">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">SS 316 Plates</h5>
+                                    <p class="card-text text-muted">Marine grade stainless steel.</p>
+                                    <a href="product-ss-sheets.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/copper-ptf.png"
+                                        class="card-img-top" alt="Copper Pipes">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Copper Busbars</h5>
+                                    <p class="card-text text-muted">High conductivity electrical grade.</p>
+                                    <a href="product-copper-products.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/alu-fittings.png"
+                                        class="card-img-top" alt="Fittings">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Buttweld Fittings</h5>
+                                    <p class="card-text text-muted">Elbows, Tees, Reducers.</p>
+                                    <a href="product-fittings.html" class="btn btn-outline-dark btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Products (16-24) -->
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/sss-pipe.png"
+                                        class="card-img-top" alt="SS Pipes">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">SS Seamless Pipes</h5>
+                                    <p class="card-text text-muted">High pressure applications.</p>
+                                    <a href="product-ss-pipes.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/bras-fittings.png"
+                                        class="card-img-top" alt="Brass Fittings">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Brass Pipe Fittings</h5>
+                                    <p class="card-text text-muted">Threaded and compression fittings.</p>
+                                    <a href="product-brass-components.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/ss-threaded rods.png"
+                                        class="card-img-top" alt="SS Rods">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">SS Threaded Rods</h5>
+                                    <p class="card-text text-muted">All standard sizes available.</p>
+                                    <a href="product-ss-rods.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/alu-rod.png"
+                                        class="card-img-top" alt="Aluminum Sheets">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Aluminum Sheets</h5>
+                                    <p class="card-text text-muted">Lightweight and corrosion resistant.</p>
+                                    <a href="product-aluminum-extrusion.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/copper-ptf.png"
+                                        class="card-img-top" alt="Copper Tubes">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Copper Tubes</h5>
+                                    <p class="card-text text-muted">Medical and refrigeration grade.</p>
+                                    <a href="product-copper-products.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/fasteners.png"
+                                        class="card-img-top" alt="Fasteners">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">SS Bolts & Nuts</h5>
+                                    <p class="card-text text-muted">High tensile strength fasteners.</p>
+                                    <a href="product-fasteners.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/alu-fittings.png"
+                                        class="card-img-top" alt="SS Angles">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">SS Angles</h5>
+                                    <p class="card-text text-muted">Structural steel angles.</p>
+                                    <a href="product-ss-sheets.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/brass-ball-valves.png"
+                                        class="card-img-top" alt="Brass Valves">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Brass Ball Valves</h5>
+                                    <p class="card-text text-muted">Industrial grade valves.</p>
+                                    <a href="product-brass-components.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/alu-profiles.png"
+                                        class="card-img-top" alt="Aluminum Profiles">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Aluminum Profiles</h5>
+                                    <p class="card-text text-muted">Custom extrusion profiles.</p>
+                                    <a href="product-aluminum-extrusion.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/ss-c-channel.png"
+                                        class="card-img-top" alt="SS Channels">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">SS Channels</h5>
+                                    <p class="card-text text-muted">U and C channel sections.</p>
+                                    <a href="product-ss-sheets.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/copper-wire-coils.png"
+                                        class="card-img-top" alt="Copper Wire">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Copper Wire</h5>
+                                    <p class="card-text text-muted">Electrical grade copper wire.</p>
+                                    <a href="product-copper-products.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/spiral-wound-gaskets.png"
+                                        class="card-img-top" alt="Gaskets">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Spiral Wound Gaskets</h5>
+                                    <p class="card-text text-muted">High temperature sealing solutions.</p>
+                                    <a href="product-fittings.html" class="btn btn-outline-dark btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/ss-flat-washers.png"
+                                        class="card-img-top" alt="SS Washers">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">SS Washers</h5>
+                                    <p class="card-text text-muted">Flat and spring washers.</p>
+                                    <a href="product-fasteners.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/brass-connectors.png"
+                                        class="card-img-top" alt="Brass Connectors">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Brass Connectors</h5>
+                                    <p class="card-text text-muted">Plumbing and pneumatic connectors.</p>
+                                    <a href="product-brass-components.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card product-card h-100">
+                                <div class="product-img-wrapper">
+                                    <img src="assets/images/alu-round-tubes.png"
+                                        class="card-img-top" alt="Aluminum Tubes">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Aluminum Tubes</h5>
+                                    <p class="card-text text-muted">Round and square tubes.</p>
+                                    <a href="product-aluminum-extrusion.html" class="btn btn-outline-dark btn-sm">View
+                                        Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav aria-label="Page navigation" class="mt-5" id="paginationNav">
+                        <ul class="pagination justify-content-center" id="paginationControls">
+                            <!-- Pagination will be generated by JavaScript -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="footer-widget">
+                        <a href="index.html" class="text-white text-decoration-none h3 d-block mb-3">PARAMOUNT METAL</a>
+                        <p>Your trusted partner for premium quality metal products. Serving industries with integrity
+                            and excellence since 2000.</p>
+                        <div class="social-icons mt-3">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <div class="footer-widget">
+                        <h4>Quick Links</h4>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="assets/documents/PMI.pdf" download><i
+                                        class="fas fa-download me-2"></i>Download Brochure</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="footer-widget">
+                        <h4>Products</h4>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="products.html">Stainless Steel</a></li>
+                            <li><a href="products.html">Carbon Steel</a></li>
+                            <li><a href="products.html">Copper & Brass</a></li>
+                            <li><a href="products.html">Aluminum</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="footer-widget">
+                        <h4>Contact Us</h4>
+                        <ul class="list-unstyled footer-links">
+                            <li><i class="fas fa-map-marker-alt me-2"></i> 123, Metal Market, Kalbadevi, Mumbai - 400002
+                            </li>
+                            <li><i class="fas fa-phone me-2"></i> +91 9898263238 </li>
+                            <li><i class="fas fa-phone me-2"></i> +91 7567330781 </li>
+                            <li><i class="fas fa-envelope me-2"></i> info@paramountmetal.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright text-center">
+                <p class="mb-0">&copy; 2025 Paramount Metal Industries. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-btns">
+        <a href="https://wa.me/919876543210" class="float-btn btn-whatsapp" target="_blank"><i
+                class="fab fa-whatsapp"></i></a>
+        <a href="tel:+919876543210" class="float-btn btn-call"><i class="fas fa-phone"></i></a>
+        <a href="#" class="float-btn btn-top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+
+    <!-- Certificate Lightbox -->
+    <div id="certificateLightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="Certificate">
+            <button class="lightbox-prev" onclick="changeCertificate(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-next" onclick="changeCertificate(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
